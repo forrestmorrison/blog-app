@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom"
-import { Home } from "./pages/Home";
-import { CreatePost } from "./pages/CreatePost";
+import Home from "./pages/Home";
+import CreatePost from "./pages/CreatePost";
 
 function App() {
   return (
