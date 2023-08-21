@@ -21,6 +21,14 @@ code {
   margin-right: auto;
 }
 
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* NavBar */
+
 header {
   display: flex;
   align-items: center;
@@ -44,8 +52,9 @@ header {
   display: flex;
 }
 
-main {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* CreatePost */
+
+.create-post {
+  max-width: 960px;
+  width: 90%;
 }
