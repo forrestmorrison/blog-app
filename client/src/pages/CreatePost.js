@@ -1,9 +1,13 @@
 import { useState } from "react"
+import { useDispatch } from "react-redux"
+import { submitPost } from "../features/postSlice"
 import { Button, TextField } from "@mui/material"
 
 const CreatePost = (props) => {
   const [title, setTitle] = useState("")
   const [body, setBody] = useState("")
+
+  const dispatch = useDispatch()
 
   const handleTitleChange = (e) => {
     setTitle(e.target.value)
@@ -13,14 +17,10 @@ const CreatePost = (props) => {
     setBody(e.target.value)
   }
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
-  }
-
   return (
     <div className="create-post">
       <h4>title</h4>
-      <form onSubmit={handleSubmit}>
+      <form>
         <TextField 
           sx={{
             width: "100%"
@@ -49,6 +49,9 @@ const CreatePost = (props) => {
             }
           }}
           type="submit"
+          onClick={() => {
+            dispatch(submitPost(title))
+          }}
         >
           Submit
         </Button>
